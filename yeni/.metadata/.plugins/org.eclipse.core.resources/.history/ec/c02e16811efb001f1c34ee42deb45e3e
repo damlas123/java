@@ -1,0 +1,17 @@
+public class Anakart{
+	private String model;
+	private String uretici;
+	private in yuva_sayisi;
+	private String isletim_sistemi;
+	
+	public void setModel(String model) {
+		this.model=model;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setUetici(String uretici) {
+		this.uretici=uretici;
+	}
+//	public String getUretici()
+}

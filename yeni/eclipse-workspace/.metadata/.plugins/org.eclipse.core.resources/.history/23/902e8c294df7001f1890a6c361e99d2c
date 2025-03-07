@@ -1,0 +1,18 @@
+public class Login{
+	public void boolean login(Hesap hesap) {
+		private String kullanici_adi;
+		private String parola;
+		Scanner scanner= new Scanner(System.in);
+		System.out.println("Enter ")
+		kullanici_adi=scanner.nextLine;
+		public void setKullanici_adi(String kullanici_adi) {
+			this.kullanici_adi=kullanici_adi;
+		}
+		public String getKullanici_adi() {
+			return kullanici_adi;
+		}
+		public void getParola(String parola) {
+			this.parola=parola;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+public class Araba{
+	private String renk;
+	private int kapilar;
+	private int tekerlekler;
+	private String motor;
+	private String model;
+	public void setModel(String model) {
+		this.model=model;
+	}
+	public String getModel() {
+		return model;
+	}
+	
+	public void setKapilar(int kapilar) {
+		if(kapilar<=0) {
+			System.out.println("The number doors can't be eqular or smaller than the 0");
+			return;
+		}
+		this.kapilar=kapilar;
+	}
+	public void getKapilar() {
+		return kapilar;
+	}
+	
+	public String setRenk(String renk) {
+		this.renk=renk;
+	}
+	public String getRenk() {
+		return renk;
+	}
+	public int setTekerlekler(int tekerlekler) {
+		if(tekerlekler<=0) {
+			System.out.println("The number can't be smaller or equal to 0");
+			return ;
+		}
+		this.tekerlekler=tekerlekler;
+	}
+	public int getTekerlekler() {
+		return tekerlekler;
+	}
+	public String setMotor(String motor) {
+		this.motor=motor;
+	}
+	public String getMotor() {
+		return motor;
+	}
+
+
+
+
+}

@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Atm {
+    public void calis(Hesap hesap) {
+        Login login = new Login();
+        Scanner scanner = new Scanner(System.in);
+        
+        int hak = 3;
+        while (hak > 0) {
+            System.out.println("Lütfen giriş yapınız.");
+            if (login.login(hesap)) {
+                System.out.println("Giriş başarılı!");
+                break;
+            } else {
+                hak--;
+                System.out.println("Hatalı giriş! Kalan hakkınız: " + hak);
+            }
+            if (hak == 0) {
+                System.out.println("Üzgünüz, giriş hakkınız tükendi.");
+                return;
+            }
+        }
+
+        while (true) {
+            System.out.println("\n--- ATM İşlemleri ---");
+            System.out.println("1 - Bakiye Görüntüle");
+            System.out.println("2 - Para Çek");
+            System.out.println("3 - Para Yatır");
+            System.out.println("q - Çıkış");
+            System.out.print("Lütfen yapmak istediğiniz işlemi seçin: ");
+            
+            String islemler = scanner.nextLine(); 
+
+            switch (islemler) {
+                case "1":
+                    System.out.println("Bakiyeniz: " + hesap.getBakiye() + " TL");
+                    break;
+                case "2":
+                    System.out.print("Çekmek istediğiniz tutarı girin: ");
+                    int cekilecekTutar = scanner.nextInt();
+                    scanner.nextLine(); // Buffer temizleme
+                    hesap.para_Cek(cekilecekTutar);
+                    break;
+                case "3":
+                    System.out.print("Yatırmak istediğiniz tutarı girin: ");
+                    int yatirilacakTutar = scanner.nextInt();
+                    scanner.nextLine(); // Buffer temizleme
+                    hesap.para_yatir(yatirilacakTutar);
+                    break;
+                case "q":
+                    System.out.println("Çıkış yapılıyor...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Hatalı seçim! Lütfen geçerli bir işlem seçin.");
+            }
+        }
+    }
+    scanner.close();
+}

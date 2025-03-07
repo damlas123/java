@@ -1,0 +1,57 @@
+public class Hesap {
+    private String kullanici;
+    private String sifre;
+    private int bakiye;
+
+    public Hesap(String kullanici, String sifre, int bakiye) {
+        this.kullanici = kullanici;
+        this.sifre = sifre;
+        this.bakiye = Math.max(bakiye, 0); // Negatif bakiye olmasını engelle
+    }
+
+    public void setKullanici(String kullanici) {
+        this.kullanici = kullanici;
+    }
+
+    public String getKullanici() {
+        return this.kullanici;
+    }
+
+    public void setBakiye(int bakiye) {
+        if (bakiye >= 0) {
+            this.bakiye = bakiye;
+        } else {
+            System.out.println("Bakiye negatif olamaz!");
+        }
+    }
+
+    public int getBakiye() {
+        return bakiye;
+    }
+
+    public void setSifre(String sifre) {
+        this.sifre = sifre;
+    }
+
+    public String getSifre() {
+    	return sifre;
+    }
+
+    public void paraCek(int cek) {
+        if (cek > bakiye) {
+            System.out.println("Yetersiz bakiye! Mevcut bakiyeniz: " + bakiye + " TL");
+        } else {
+            bakiye -= cek;
+            System.out.println("Başarıyla " + cek + " TL çektiniz. Yeni bakiyeniz: " + bakiye + " TL");
+        }
+    }
+
+    public void paraYatir(int yatir) {
+        if (yatir > 0) {
+            bakiye += yatir;
+            System.out.println("Başarıyla " + yatir + " TL yatırdınız. Yeni bakiyeniz: " + bakiye + " TL");
+        } else {
+            System.out.println("Geçersiz para yatırma işlemi!");
+        }
+    }
+}

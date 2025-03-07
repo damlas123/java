@@ -1,0 +1,8 @@
+
+public class Main{
+	public static void main(String[] args) throws Exception{
+	Daire daire1=new Daire(yaricap:8);
+	daire1.EkranaYazdir();
+	Daire daire2=new Daire(yaricap:6);
+	}
+}

@@ -1,0 +1,8 @@
+public class Main{
+	public static void main(String[] args) {
+		Atm atm= new Atm();
+		Hesap hesap=new Hesap("Damla s","120504",874596321);
+		atm.calis(Hesap hesap);
+		System.out.println("Sistemnden çıkılıyor......");
+	}
+}

@@ -1,0 +1,12 @@
+public class Bilgisayar{
+	private Ekran monitor;
+	private Anakart anakart;
+	private Kasa kasa;
+	
+	public void setMonitor(Ekran monitor) {
+		this.monitor=monitor;
+	}
+	public Ekran getMonitor() {
+		return monitor;
+	}
+}

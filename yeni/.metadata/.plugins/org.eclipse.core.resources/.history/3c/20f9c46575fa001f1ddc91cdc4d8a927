@@ -1,0 +1,4 @@
+public Interface IA{
+	public int a;
+	
+}

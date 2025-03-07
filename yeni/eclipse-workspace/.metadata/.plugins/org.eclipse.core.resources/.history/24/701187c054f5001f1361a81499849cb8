@@ -1,0 +1,47 @@
+public class Hesap{
+	private String sifre;
+	private int bakiye;
+	private int cek;
+	private int yatir;
+	public Hesap(String sifre,int bakiye,int cek,int yatir) {
+		this.bakiye=bakiye;
+		this.cek=sifre;
+		this.yatir=yatir;
+	}
+	
+	public void setBakiye(int bakiye) {
+		this.bakiye=bakiye;
+	}
+	
+	public int getBakiye() {
+		return bakiye;
+	}
+	
+	public void setCek(int cek) {
+		if(bakiye>cek) {
+		this.cek=cek;
+		bakiye=bakiye-cek;
+		}
+		else
+			cek=0;
+	}
+	public int getCek() {
+		return cek;
+	}
+	
+	public void setyatir(int yatir) {
+		this.yatir=yatir;
+	}
+	
+	public int getyatir() {
+		this.yatir=yatir;
+	}
+	
+	public void setsifre(String sifre) {
+		this.sifre=sifre;
+	}
+	
+	public String sifre() {
+		return sifre;
+	}
+}

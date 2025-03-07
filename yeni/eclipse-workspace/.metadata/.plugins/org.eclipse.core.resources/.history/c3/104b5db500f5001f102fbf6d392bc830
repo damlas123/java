@@ -1,0 +1,18 @@
+public class Kare{
+	private double kenar;
+	
+	private double getkenar(){
+	return kenar;
+}
+	private void setkenar(double kenar) {
+		if(kenar<=0) {
+			System.out.println("The line can't smaller than 0");
+			this.kenar=kenar;
+	}
+		else {
+			this.kenar=kenar;
+			
+		}
+		return kenar;
+}
+}

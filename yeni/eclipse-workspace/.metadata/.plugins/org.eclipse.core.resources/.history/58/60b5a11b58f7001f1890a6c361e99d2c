@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Atm{
+	public void calis(Hesap hesap) {
+		Login login = new Login();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the name:");
+		login.login.kullanici_adi=scanner.nextLine();
+		scanner.nextLine();
+		System.out.println("Enter the password:");
+		login.paralo=scanner.nextLine();
+		scanner.close();
+	}
+}

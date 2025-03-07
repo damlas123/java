@@ -1,0 +1,42 @@
+public class Hesap{
+	private String kullanici;
+	private String sifre;
+	private int bakiye;
+	
+	public Hesap(String kullanici,String sifre,int bakiye) {
+		this.kullanici=kullanici;
+		this.sifre=sifre;
+		this.bakiye=bakiye;
+			}
+	
+	public void setBakiye(int bakiye) {
+		this.bakiye=bakiye;
+	}
+	
+	public int getBakiye() {
+		return bakiye;
+	}
+	
+	public void setsifre(String sifre) {
+		this.sifre=sifre;
+	}
+	
+	public String sifre() {
+		return sifre;
+	}
+	
+	public void para_Cek(int cek) {
+		if(cek>bakiye) {
+			System.out.println("Exceed your budget");
+			return;
+		}
+		else {
+			bakiye-=cek;
+			System.out.println("new budget is:" + bakiye);
+		}
+	}
+	public void para_yatir(int yatir) {
+		bakiye+=yatir;
+		System.out.println("New budget is:"+bakiye);
+	}
+}

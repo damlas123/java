@@ -1,0 +1,15 @@
+public class Banka{
+	private String hesapno;
+	private double bakiye;
+	private String isim;
+	private String email;
+	private String telefonNo;
+	
+	public void Banka(String hesapno,double bakiye,String isim,String email,String telefonNo) {
+		this.hesapno=hesapno;
+		this.bakiye=bakiye;
+		this.email=email;
+		this.isim=isim;
+		this.telefonNo=telefonNo;
+	}
+}

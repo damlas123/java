@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Login{
+	public boolean login(Hesap hesap) {
+		private String kullanici_adi;
+		private String parola;
+		Scanner scanner= new Scanner(System.in);
+		System.out.println("Enter your name: ");
+		kullanici_adi=scanner.nextLine();
+		scanner.nextLine();
+		System.out.print("Enter your password:");
+		parola=scanner.nextLine();
+		
+		public void setKullanici_adi(String kullanici_adi) {
+			this.kullanici_adi=kullanici_adi;
+		}
+		public String getKullanici_adi() {
+			return kullanici_adi;
+		}
+		public void setParola(String parola) {
+			this.parola=parola;
+		}
+		public String getParola(String parola) {
+			return parola;
+		}
+		scanner.close();
+	}
+}

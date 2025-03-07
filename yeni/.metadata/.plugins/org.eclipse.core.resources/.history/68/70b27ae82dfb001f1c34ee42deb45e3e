@@ -1,0 +1,6 @@
+public class Main{
+	public static void main(String args) {
+		Daire daire1=new Daire(7,8,3,85);
+		System.out.println("Alan:"+daire1.AlanHesapla());
+	}
+}

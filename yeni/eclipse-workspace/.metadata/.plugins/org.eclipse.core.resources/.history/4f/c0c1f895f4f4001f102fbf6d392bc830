@@ -1,0 +1,12 @@
+public class Rectangle{
+	public Rectangle alanhesapla() {
+		return en*boy;
+	}
+
+
+private double cevreHesapla() {
+	return 2*(en+boy);
+}
+
+ 
+}

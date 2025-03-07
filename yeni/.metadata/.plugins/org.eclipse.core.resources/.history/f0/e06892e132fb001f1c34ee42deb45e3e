@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[] args) {
+		System.out.println("Hoşgeldiniz");
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Yarıçapı giriniz:");
+		double yaricap=scanner.nextDouble();
+		Daire daire1= new Daire(20,20,"yeşil",yaricap);
+		System.out.println(daire1);
+		daire1.konumdegistir(10,20);
+		System.out.println(daire1);
+		System.out.println(daire1.getKonumX());
+				
+	}
+}

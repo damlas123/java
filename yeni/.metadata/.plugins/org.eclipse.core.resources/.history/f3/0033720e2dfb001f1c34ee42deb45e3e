@@ -1,0 +1,10 @@
+public class Daire{
+	private double yaricap;
+	private int x;
+	private int y;
+	public Daire(int x,int y,double yaricap) {
+		this.x=x;
+		this.y=y;
+		this.yaricap=yaricap;
+	}
+}

@@ -1,0 +1,10 @@
+public class Main{
+	public static void main(String[] args) {
+		Banka yeni=new Banka();
+		yeni.setbakiye(7800);
+		yeni.setEmail("dsadghj@hjgfd");
+		yeni.setHesapno("8754");
+		yeni.settelefonNo("015487");
+		System.out.println(yeni.getbakiye() + yeni.getEmail() +  yeni.getHesapno() + yeni.getisim() +  yeni.gettelefonNo());
+	}
+}

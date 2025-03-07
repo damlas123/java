@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("1-Yönetici işlemleri\t2-Yazılımcı işlemleri\t3-'q' for çıkış\n" );
+		nextLine();
+		String islem=scanner.nextLine();
+		while(true) {
+			switch(islem) {
+			case "1":
+				Yonetici yeni=new Yonetici("Damla","Soylemez",65,10);
+				System.out.println("1-Bİlgileri görüntüle\t2-Çıkış için "q"\n");
+				nextLine();
+				String islemler=scanner.nextLine();
+				if("1".equals(islemler)) {
+					yeni.bilgilerigoster();
+					else
+					{
+						break;
+					}
+				}
+				break;
+			case "2":
+				Yazilimci yeni1=new Yazilimci("Deniz","Erdem",67,"Java,C,Python");
+				System.out.println("1-Bilgileri göster\t2-İşletim sistemine format at\t3-Çıkış için 'q'\n");
+				String islemler=scanner.nextLine();
+				if("1".equals(islemler)) {
+					yeni1.bilgilerigoster();
+				}
+				else if("2".equals(islemler)) {
+					System.out.println("İşletim sistemini giriniz:");
+					scanner isletim_sistemi=scanner.nextLine();
+					yeni1.format_At(isletim_sistemi);
+				}
+				else {
+					break;
+				}
+			}
+			break;
+			case "q":
+				break;
+		}
+	}
+}

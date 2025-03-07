@@ -1,0 +1,31 @@
+public class Daire{
+	private double yaricap;
+	private int x;
+	private int y;
+	public Daire(int x,int y,double yaricap) {
+		this.x=x;
+		this.y=y;
+		this.yaricap=yaricap;
+	}
+	public void setX(int x) {
+		this.x=x;
+	}
+	public int getX() {
+		return x;
+	}
+	public void setY(int y) {
+		this.y=y;
+	}
+	public int getY() {
+		return y;
+	}
+	public void setYaricap(double yaricap) {
+		this.yaricap=yaricap;
+	}
+	public double getYaricap() {
+		return yaricap;
+	}
+	public String ToString() {
+		System.out.println("konumu: "+x+" , "+y+"   Yarıçap:"+yaricap);
+	}
+}

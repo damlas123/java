@@ -1,0 +1,58 @@
+public class Banka{
+	private String hesapno;
+	private double bakiye;
+	private String isim;
+	private String email;
+	private String telefonNo;
+	
+	public Banka() {
+		
+	};
+	
+	public Banka(String hesapno,double bakiye,String isim,String email,String telefonNo) {
+		this.hesapno=hesapno;
+		this.bakiye=bakiye;
+		this.email=email;
+		this.isim=isim;
+		this.telefonNo=telefonNo;
+	}
+	
+	public void setHesapno(String hesapno) {
+		this.hesapno=hesapno;
+	}
+	public String getHesapno() {
+		return hesapno;
+	}
+	
+	public void setbakiye(double bakiye) {
+		this.bakiye=bakiye;
+	}
+	public double getbakiye() {
+		return bakiye;
+	}
+	
+	public void setisim(String isim) {
+		this.isim=isim;
+	}
+	public String getisim() {
+		return isim;
+	}
+	
+	public void settelefonNo(String telefonNo) {
+		this.telefonNo=telefonNo;
+	}
+	public String gettelefonNo() {
+		return telefonNo;
+	}
+	
+	
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	
+}

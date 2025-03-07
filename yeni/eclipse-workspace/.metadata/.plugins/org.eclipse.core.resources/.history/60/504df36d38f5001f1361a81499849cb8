@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main{
+	public static boolean Asalmi(int sayi) {
+		for(int i=2;i<=sayi/2;i++) {
+			if(sayi%i==0) {
+				return false;
+				break;
+			}
+		}
+		return true;
+	}
+	public static void main(String[] args) {
+		int i;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter a number");
+		i=scanner.nextInt();
+		if(Asalmi(i)) {
+			System.out.println("number is prime");
+		}
+		else {
+			System.out.println("number is not prime");
+		}
+		scanner.close();
+				
+	}
+}

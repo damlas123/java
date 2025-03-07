@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Atm{
+	public void calis(Hesap hesap) {
+		Login login = new Login();
+		Scanner scanner=new Scanner(System.in);
+	   int hak=3;
+	   while(true) {
+		   if(login.login(hesap)) {
+			   System.out.println("Giris basarılı");
+			   break;
+		   }
+		   else {
+			   System.out.println("Giris hakkiniz:"+hak);
+			   hak--;
+		   }
+		   if(hak==0) {
+			   return ;
+		   }
+	   }
+	   String islemler;
+	   System.out.println("1-Bakiye görüntüle\n2-Para çek\n3-Para yatir\n4-q for çıkış");
+	   System.out.println("islemler:");
+	   islemler=scanner.nextLine();
+	   while(true) {
+	   if(islemler.equals("q")) {
+		   break;
+	   }
+	   else if(islemler.equals("1")) {
+		   System.out.println("your budget is:"+hesap.getBakiye());
+	   }
+	   else if(islemler.equals("2")) {
+		   int m;
+		   System.out.println("enter money:");
+		   m=scanner.nextInt();
+		   hesap.para_Cek(m);
+	   }
+	   else if( islemler.equals("3")) {
+		   int m;
+		   System.out.println("Enter money:");
+		   m=scanner.nextInt();
+		   hesap.para_yatir(m);
+	   }
+	   else {
+		   System.out.println("you entered wrong select......");
+	   }
+	   
+		scanner.close();
+	}
+	}
+	scanner.close();
+	}
+

@@ -1,0 +1,21 @@
+public class Idman{
+	private int bushep;
+	private int pushup;
+	private int situp;
+	private int squat;
+	
+	
+	
+	public void setbushep(int sayi) {
+		bushep=sayi;
+	}
+	public int getbushep() {
+		return bushep;
+	}
+	public void setpushup(int sayi) {
+		pushup=sayi;
+	}
+	public int getpushup() {
+		return pushup;
+	}
+}

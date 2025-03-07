@@ -1,0 +1,5 @@
+public class Bilgisayar{
+	Ekran monitor;
+	Anakart anakart;
+	Kasa kasa;
+}

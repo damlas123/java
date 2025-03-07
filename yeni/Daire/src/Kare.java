@@ -1,0 +1,17 @@
+public class Kare extends Sekil{
+	private  double kenar;
+	public Kare(double konumX,double konumY,String renk,double kenar) {
+		super(konumX,konumY,renk);
+		this.kenar=kenar;
+	}
+	public void setKenar(double kenar) {
+		this.kenar=kenar;
+	}
+	public double getKenar() {
+		return kenar;
+	}
+	@Override
+	public double alanHesapla() {
+		return kenar*kenar;
+	}
+}

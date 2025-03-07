@@ -1,0 +1,9 @@
+public class Main{
+	public static void main(String[] args) {
+		Abone abone=new Abone();
+		abone.isim="Damla soylemez";
+		abone.bakiye=200;
+		//abone.sehir="ankara";
+		abone.dogalgaz_kullan(200);
+	}
+}

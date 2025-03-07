@@ -1,0 +1,13 @@
+public class Daire extends Sekil{
+	private double yaricap;
+	
+	public void setYaricap(double yaricap) {
+		this.yaricap=yaricap;
+	}
+	public double getYaricap() {
+		return yaricap;
+	}
+	
+	@Override
+	public double ala
+}

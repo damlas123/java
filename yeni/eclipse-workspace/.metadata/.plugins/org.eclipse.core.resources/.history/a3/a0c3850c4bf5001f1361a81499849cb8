@@ -1,0 +1,8 @@
+public class Araba{
+	private String renk;
+	private int kapilar;
+	private int tekerlekler;
+	private int motor;
+	private String model;
+	
+}

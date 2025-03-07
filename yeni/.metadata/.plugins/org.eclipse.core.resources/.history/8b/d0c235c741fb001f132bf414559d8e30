@@ -1,0 +1,6 @@
+public class Hayvan{
+	
+   private void sescikar() {
+   System.out.println((" hayvan konuşuyor")
+}
+}

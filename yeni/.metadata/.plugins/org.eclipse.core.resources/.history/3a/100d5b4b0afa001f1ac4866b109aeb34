@@ -1,0 +1,7 @@
+public class Idman{
+	private String bushepsayisi;
+	private String pushup;
+	private String situp;
+	private String squat;
+	
+}

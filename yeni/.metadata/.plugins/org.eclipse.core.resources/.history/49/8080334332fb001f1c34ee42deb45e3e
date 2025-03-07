@@ -1,0 +1,13 @@
+public class EskenarUcgen extends Sekil{
+	private double kenar;
+	public EskenarUcgen(double konumX,double konumY,String renk,double kenar) {
+		super(konumX,konumYrenk);
+		this.kenar=kenar;
+	}
+	public void setkenar(double kenar) {
+		this.kenar=kenar;
+	}
+	public double getkenar() {
+		return kenar;
+	}
+}
