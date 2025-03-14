@@ -1,5 +1,0 @@
-public class Yazilimci extends Calisan{
-	public Yazilimci(String name,String soyad,int id) {
-		super(name,soyad,id);
-	}
-}

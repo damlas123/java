@@ -1,5 +1,0 @@
-public class Bilgisayar{
-	private Ekran monitor;
-	private Anakart anakart;
-	private Kasa kasa;
-}

@@ -1,8 +1,0 @@
-public class Main{
-	public static void main(String[] args) {
-		Resolition resolition= new Resolition(1920,1254);
-		Ekran ekran= new Ekran("vx324","Asus",25,resolition);
-		
-		
-	}
-}

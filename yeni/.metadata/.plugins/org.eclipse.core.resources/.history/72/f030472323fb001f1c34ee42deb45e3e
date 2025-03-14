@@ -1,7 +1,0 @@
-public class Ekran{
-	private String model;
-	private String uretici;
-	private int boyut;
-	private Resolition resolition;
-	
-}

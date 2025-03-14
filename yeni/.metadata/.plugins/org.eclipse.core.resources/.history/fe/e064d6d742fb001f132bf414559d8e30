@@ -1,6 +1,0 @@
-public class Main{
-	public static void main(String[] args) {
-		Hayvan h1=new Kedi();
-		h1.sescikar();
-	}
-}
