@@ -2,8 +2,11 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="Ucgen"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="Matematik.factoriel"/>
+    <fullyQualifiedTypeName name="Matematik.Asal"/>
+    <fullyQualifiedTypeName name="Matematik.Daire_alan"/>
 </qualifiedTypeNameHistroy>
