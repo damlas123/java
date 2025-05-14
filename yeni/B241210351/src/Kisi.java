@@ -1,14 +1,13 @@
 /** 
-* 
-* @author Damla Söylemez damla.soylemez@ogr.sakarya.edu.tr
-* @since 16.04.2025
-* <p> 
-*  Kişi sınıfımda kisiler dosyadan alınıyor ve this metodu ile özelliklerine atanıyor. Yaşayıp yaşamadığı kontrol ediliyor.
-* </p> 
-*/ 
+ * 
+ * @author Damla Söylemez damla.soylemez@ogr.sakarya.edu.tr
+ * @since 16.04.2025
+ * <p> 
+ *  Kişilerin özelliklerini tutar ve ömür durumunu kontrol eder.
+ * </p> 
+ */ 
 
-
-class Kisi {
+public class Kisi {
     String isim;
     int yas;
     int kalanOmur;
@@ -27,7 +26,7 @@ class Kisi {
     }
 
     public void birSaatYasat() {
-        kalanOmur--;
+        if (kalanOmur > 0) kalanOmur--;
     }
 
     @Override

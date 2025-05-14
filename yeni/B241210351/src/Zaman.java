@@ -1,12 +1,11 @@
-
 /** 
-* 
-* @author Damla Söylemez damla.soylemez@ogr.sakarya.edu.tr
-* @since 16.04.2024
-* <p> 
-*  zaman sınıfı ile gelen zamanı parçalayıp gün ay yil ve saat olarak ayırıp en sonda da yazdırıyorum
-* </p> 
-*/ 
+ * 
+ * @author Damla Söylemez damla.soylemez@ogr.sakarya.edu.tr
+ * @since 16.04.2024
+ * <p> 
+ *  Tarihi yöneten zaman sınıfı.
+ * </p> 
+ */ 
 
 public class Zaman {
     private int gun;   
@@ -24,12 +23,12 @@ public class Zaman {
         this.gunsaati = gunsaati;
     }
 
-    public void zamanilerletme() {
+    public void ilerlet() {
         saat++;
         if (saat >= gunsaati) {
             saat = 0;
             gun++;
-            if (gun > 30) { 
+            if (gun > 30) {
                 gun = 1;
                 ay++;
                 if (ay > 12) {
@@ -40,16 +39,16 @@ public class Zaman {
         }
     }
 
-    public String gettarih() {
+    public String getTarih() {
         return gun + "." + ay + "." + yil;
     }
 
-    public String getsaat() {
+    public String getSaat() {
         return (saat < 10 ? "0" + saat : saat) + ":00";
     }
 
     @Override
     public String toString() {
-        return gettarih() + " - " + getsaat();
+        return getTarih() + " - " + getSaat();
     }
 }

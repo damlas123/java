@@ -1,23 +1,22 @@
-
 /** 
-* 
-* @author Damla Söylemez
-* @since 19.04.2024
-* <p> 
-*  Uzay Araçlarını okuyup durumlarını belirliyorum. 
-* </p> 
-*/ 
+ * 
+ * @author Damla Söylemez
+ * @since 19.04.2024
+ * <p> 
+ *  Uzay araçlarının hareketini ve durumunu yönetir.
+ * </p> 
+ */ 
 
 import java.util.ArrayList;
 import java.util.List;
 
-class UzayAraci {
+public class UzayAraci {
     private String uzayAraciAdi;
     private Gezegen varisGezegeni;
     private Gezegen cikisGezegeni;
     private int hedefeKalanSure;
     private String varilacakTarih;
-    private String durum = "Bekliyor";
+    private String durum;
     private List<Kisi> yolcular = new ArrayList<>();
 
     public UzayAraci(String uzayAraciAdi, Gezegen cikisGezegeni, Gezegen varisGezegeni, int hedefeKalanSure, String varilacakTarih, String durum) {
@@ -36,6 +35,20 @@ class UzayAraci {
     public String getDurum() {
         return durum;
     }
+    
+    public void setCikisGezegeni(Gezegen cikisGezegeni) {
+    	this.cikisGezegeni=cikisGezegeni;
+    }
+    public Gezegen getCikisGezegeni() {
+    	return cikisGezegeni;
+    }
+    
+    public void setvarisGezegeni(Gezegen varisGezegeni) {
+    	this.varisGezegeni=varisGezegeni;
+    }
+    public Gezegen getVarisGezegeni() {
+    	return varisGezegeni;
+    }
 
     public void setDurum(String durum) {
         this.durum = durum;
@@ -44,6 +57,18 @@ class UzayAraci {
     public void yolcuEkle(Kisi kisi) {
         yolcular.add(kisi);
     }
+    
+    public void setVarilacakTarih(String varilacakTarih) {
+    	this.varilacakTarih=varilacakTarih;
+    }
+    public String getVarilacakTarih() {
+    	return varilacakTarih;
+    }
+    
+
+public int getBaslangicSuresi() {
+    return hedefeKalanSure + 1; 
+}
 
     public boolean durumkontrol() {
         for (Kisi k : yolcular) {
@@ -56,8 +81,32 @@ class UzayAraci {
         return true;
     }
 
+
+    public void ilerlet() {
+        if (durum.equals("IMHA") || hedefeKalanSure <= 0) return;
+
+        hedefeKalanSure--;
+
+        if (hedefeKalanSure == 0) {
+            durum = "Varış";
+            varisGezegeni.nufusartir();
+        }
+    }
+
+    public int getKalanSure() {
+        return hedefeKalanSure;
+    }
+
     @Override
     public String toString() {
+        if (durum.equals("IMHA")) {
+            return "Araç Adı: " + uzayAraciAdi +
+                   "\nDurum: IMHA\nÇıkış: " + cikisGezegeni.ad +
+                   "\nVarış: " + varisGezegeni.ad +
+                   "\nHedefe Kalan Saat: --" +
+                   "\nHedefe Varacağı Tarih: --\n";
+        }
+
         return "Araç Adı: " + uzayAraciAdi +
                "\nDurum: " + durum +
                "\nÇıkış: " + cikisGezegeni.ad +
@@ -66,4 +115,3 @@ class UzayAraci {
                "\nHedefe Varacağı Tarih: " + varilacakTarih + "\n";
     }
 }
-

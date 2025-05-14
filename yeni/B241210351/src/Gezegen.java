@@ -1,24 +1,31 @@
 /** 
-* 
-* @author damla söylemez damla.soylemez@ogr.sakarya.edu.tr
-* @since 22.04.2025
-* <p> 
-*  gezegenleri tarihleri ve saatlerini alıp en sonda yazdıran sınıf.
-* </p> 
-*/ 
+ * 
+ * @author damla söylemez damla.soylemez@ogr.sakarya.edu.tr
+ * @since 22.04.2025
+ * <p> 
+ *  Gezegenlerin zamanını yöneten ve nüfusu takip eden sınıf.
+ * </p> 
+ */ 
 
-class Gezegen {
+public class Gezegen {
     String ad;
     int gunSaat;
-    String tarih;
-
+    Zaman zaman;
     private int nufus = 0;
 
     public Gezegen(String veri) {
         String[] gezegenler = veri.split("#");
         this.ad = gezegenler[0];
         this.gunSaat = Integer.parseInt(gezegenler[1]);
-        this.tarih = gezegenler[2];
+        this.zaman = new Zaman(gezegenler[2], gunSaat);
+    }
+
+    public void zamanIlerle() {
+        zaman.ilerlet();
+    }
+
+    public String zamanBilgisi() {
+        return zaman.toString();
     }
 
     public void nufusartir() {
@@ -35,6 +42,6 @@ class Gezegen {
 
     @Override
     public String toString() {
-        return ad + " - Gün: " + gunSaat + " saat - Tarih: " + tarih;
+        return ad + " - " + zamanBilgisi() + " - Nüfus: " + nufus;
     }
 }
